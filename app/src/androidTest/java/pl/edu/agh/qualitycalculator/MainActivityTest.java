@@ -53,6 +53,31 @@ public class MainActivityTest {
         onView(withId(R.id.btnDiv)).perform(click());
         onView(withId(R.id.tvResult)).check(matches(withText("40.0 divided by 10.0 gives value 4.0")));
     }
+
+    @Test
+    public void testEmptySum() {
+        onView(withId(R.id.btnAdd)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("Enter some data to calculate")));
+    }
+
+    @Test
+    public void testEmptySubtract() {
+        onView(withId(R.id.btnSub)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("Enter some data to calculate")));
+    }
+
+    @Test
+    public void testEmptyMultiply() {
+        onView(withId(R.id.btnMult)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("Enter some data to calculate")));
+    }
+
+    @Test
+    public void testEmptyDivide() {
+        onView(withId(R.id.btnDiv)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("Enter some data to calculate")));
+    }
 }
+
 
 
