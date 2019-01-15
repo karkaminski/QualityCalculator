@@ -15,12 +15,18 @@ public class MainActivity extends Activity implements View.OnClickListener {
     EditText etNum1;
     EditText etNum2;
 
+    EditText avgNum1;
+    EditText avgNum2;
+    EditText avgNum3;
+
     Button btnAdd;
     Button btnSub;
     Button btnMult;
     Button btnDiv;
+    Button btnAvg;
 
     TextView tvResult;
+    TextView tvResultAvg;
 
     Calculations calculations = new Calculations();
     CalculationsVerbalizer verbalizer = new CalculationsVerbalizer();
@@ -33,17 +39,25 @@ public class MainActivity extends Activity implements View.OnClickListener {
         etNum1 = (EditText) findViewById(R.id.etNum1);
         etNum2 = (EditText) findViewById(R.id.etNum2);
 
+        avgNum1 = (EditText) findViewById(R.id.avNum1);
+        avgNum2 = (EditText) findViewById(R.id.avNum2);
+        avgNum3 = (EditText) findViewById(R.id.avNum3);
+
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnSub = (Button) findViewById(R.id.btnSub);
         btnMult = (Button) findViewById(R.id.btnMult);
         btnDiv = (Button) findViewById(R.id.btnDiv);
+        btnAvg = (Button) findViewById(R.id.btnAvg);
 
         tvResult = (TextView) findViewById(R.id.tvResult);
+        tvResultAvg = (TextView) findViewById(R.id.tvResultAvg);
+
 
         btnAdd.setOnClickListener(this);
         btnSub.setOnClickListener(this);
         btnMult.setOnClickListener(this);
         btnDiv.setOnClickListener(this);
+        btnAvg.setOnClickListener(this);
     }
 
     @Override
