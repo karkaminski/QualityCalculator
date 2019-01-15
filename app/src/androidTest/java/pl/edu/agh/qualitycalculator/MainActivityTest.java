@@ -55,6 +55,14 @@ public class MainActivityTest {
     }
 
     @Test
+    public void testDivideByZero() {
+        onView(withId(R.id.etNum1)).perform(click()).perform(typeText("40"));
+        onView(withId(R.id.etNum2)).perform(click()).perform(typeText("0"));
+        onView(withId(R.id.btnDiv)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("40.0 divided by 0.0 gives value Infinity")));
+    }
+
+    @Test
     public void testEmptySum() {
         onView(withId(R.id.btnAdd)).perform(click());
         onView(withId(R.id.tvResult)).check(matches(withText("Enter some data to calculate")));

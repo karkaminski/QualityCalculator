@@ -32,6 +32,4 @@ public class Calculations {
         return operand1 / operand2;
     }
 
-    private float average(float operand1, float operand2, float operand3) {return ((operand1+operand2+operand3)/3);}
-
 }
